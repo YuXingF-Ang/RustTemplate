@@ -1,0 +1,7 @@
+[template]
+# 精确指定需要跳过的文件（而非通配所有toml）
+exclude = [
+    "cliff.toml",       # 跳过git-cliff配置
+    "deny.toml",        # 跳过cargo-deny配置
+    "_typos.toml"       # 跳过typos检查配置
+]
