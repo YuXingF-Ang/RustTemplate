@@ -1,5 +1,6 @@
-根据陈天老师的训练营创建的模板
+根据陈天老师的训练营创建的模板,对模板进行了较新版本的更新
 
+## 使用模板时记得修改将TODO的地方进行修改
 ## 模板要求
 
 ### VSCode 插件（可选）
@@ -31,6 +32,7 @@ cargo install cargo-generate
 ```bash
 cargo generate github_name/repo
 ```
+[text]["https://github.com/cargo-generate/cargo-generate"]
 
 ### 安装 pre-commit
 
@@ -40,7 +42,13 @@ cargo generate github_name/repo
 pipx install pre-commit
 ```
 
-安装成功后运行 `pre-commit install` 。
+安装成功后运行 `pre-commit install`可在当前项目安装pre-commit 。
+
+用pre-commit测试的方法
+```bash
+pre-commit run --all-files
+```
+[text][pre-commit.com]
 
 ### 安装 Cargo deny
 
@@ -48,6 +56,11 @@ pipx install pre-commit
 
 ```bash
 cargo install --locked cargo-deny
+```
+
+插件测试方法(一般来说pre-commit就包含了它的方法)
+```bash
+cargo deny check
 ```
 
 ### 安装 typos
@@ -64,6 +77,11 @@ cargo install typos-cli
 
 ```bash
 cargo install git-cliff
+```
+
+它会在如下情况生成changelog
+```bash
+git tag -a v0.*.*
 ```
 
 ### 安装 cargo nextest
