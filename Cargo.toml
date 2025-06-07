@@ -1,5 +1,5 @@
 [package]
-name = "test" # TODO 修改
+name = "{{project-name}}" # TODO 修改
 version = "0.1.0"
 authors=["{{authors}}"] # TODO 修改
 
